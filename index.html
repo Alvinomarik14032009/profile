@@ -1,1 +1,151 @@
-Hallo My name is Vinz
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Konfigurasi</title>
+    <style>
+        /* ====== Gaya Umum ====== */
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #f1f1f1;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #00d4ff;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        /* ====== Tombol ====== */
+        .btn {
+            display: inline-block;
+            background: #00d4ff;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #00aacc;
+            transform: scale(1.05);
+        }
+
+        /* ====== Bagian tambahan (disembunyikan awalnya) ====== */
+        #detail-konfigurasi {
+            display: none;
+            margin-top: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(-10px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #ccc;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Belajar Konfigurasi</h1>
+        <p>Panduan Lengkap untuk Memahami dan Menerapkan Konfigurasi Sistem By Vinz Official</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Apa Itu Konfigurasi?</h2>
+            <p>
+                Konfigurasi adalah proses pengaturan dan penyesuaian parameter agar sistem, aplikasi, 
+                atau perangkat keras dapat bekerja sesuai kebutuhan pengguna. Dalam dunia teknologi, 
+                konfigurasi menjadi aspek penting karena menentukan performa, keamanan, dan kompatibilitas suatu sistem.
+            </p>
+        </section>
+
+        <section>
+            <h2>Mengapa Harus Belajar Konfigurasi?</h2>
+            <p>
+                Dengan memahami konfigurasi, Anda dapat menyesuaikan sistem sesuai keperluan. 
+                Misalnya, dalam server, konfigurasi menentukan bagaimana layanan berjalan, siapa yang punya akses, 
+                serta bagaimana keamanan diterapkan. Konfigurasi juga membantu dalam troubleshooting atau pemecahan masalah teknis.
+            </p>
+        </section>
+
+        <button class="btn" onclick="tampilkanDetail()">Pelajari Lebih Lanjut</button>
+
+        <div id="detail-konfigurasi">
+            <h2>Langkah-langkah Dasar Belajar Konfigurasi</h2>
+            <ul>
+                <li><strong>Pahami Struktur Sistem:</strong> Ketahui bagaimana sistem bekerja dan komponen apa saja yang saling terhubung.</li>
+                <li><strong>Pelajari File Konfigurasi:</strong> Biasanya menggunakan format seperti `.conf`, `.yaml`, atau `.json`.</li>
+                <li><strong>Coba Modifikasi Aman:</strong> Uji perubahan pada lingkungan pengujian sebelum diterapkan ke sistem utama.</li>
+                <li><strong>Gunakan Versi Kontrol:</strong> Simpan versi konfigurasi agar mudah rollback jika terjadi kesalahan.</li>
+                <li><strong>Dokumentasikan:</strong> Catat setiap perubahan agar tim lain bisa memahami konfigurasi yang diterapkan.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Belajar Konfigurasi - Web Create By Vinz Official - Wa : wa.me/62895370687060
+    </footer>
+
+    <script>
+        function tampilkanDetail() {
+            const detail = document.getElementById('detail-konfigurasi');
+            const btn = document.querySelector('.btn');
+
+            if (detail.style.display === 'none' || detail.style.display === '') {
+                detail.style.display = 'block';
+                btn.textContent = 'Sembunyikan Detail';
+            } else {
+                detail.style.display = 'none';
+                btn.textContent = 'Pelajari Lebih Lanjut';
+            }
+        }
+    </script>
+</body>
+</html>
